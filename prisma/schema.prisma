@@ -13,7 +13,9 @@ model User {
 }
 
 model Comment {
-  id      String  @id @default(auto()) @map("_id") @db.ObjectId
-  ownerId String?
-  text    String?
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  ownerId   String?
+  ownerName String?
+  text      String?
+  likes     Int?    @default(0)
 }

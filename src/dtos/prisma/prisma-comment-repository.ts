@@ -8,10 +8,11 @@ export class PrismaCommentRepository implements CommentRepository {
     private prisma: PrismaService
   ) { }
 
-  async createComment(ownerId: string, text: string): Promise<void> {
+  async createComment(ownerId: string, text: string, ownerName: string): Promise<void> {
     await this.prisma.comment.create({
       data: {
         ownerId: ownerId,
+        ownerName: ownerName,
         text: text
       }
     })

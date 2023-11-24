@@ -1,6 +1,7 @@
 abstract class CommentRepository {
   abstract createComment(
     ownerId: string,
+    ownerName: string,
     text: string
   ): Promise<void>
 

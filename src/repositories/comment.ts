@@ -1,5 +1,6 @@
 export class createComment {
   ownerId: string;
+  ownerName: string;
   text: string;
 }
 

@@ -10,9 +10,9 @@ export class CommentController {
 
   @Post("create")
   async createComment(@Body() body: createComment) {
-    const {ownerId, text} = body
+    const {ownerId, text, ownerName} = body
     try {
-      await this.commentRepository.createComment(ownerId, text)
+      await this.commentRepository.createComment(ownerId, ownerName, text)
     } catch (error) {
       console.log(error)
     }
